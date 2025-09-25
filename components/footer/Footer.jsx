@@ -83,7 +83,7 @@ export default function Footer() {
                 <h2 className="nav-foot-header nav-accordion">{t(lang, 'download')}</h2>
                 <div className="nav-foot">
                   <div className="download-btn-cont">
-                    <Link href="https://testflight.apple.com/join/DcG2C37G"><Image src={apple} alt="download" /></Link>
+                    <Link href="#"><Image src={apple} alt="download" /></Link>
                     <Link href="#" ><Image src={google} alt="download" /></Link>
                   </div>
                 </div>
