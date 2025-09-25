@@ -1,0 +1,21 @@
+// // Abstracts
+@import "sass/abstracts/variables";
+@import "sass/abstracts/mixins";
+
+// // Base
+@import "sass/base/base";
+@import "sass/base/fonts";
+
+// //Components
+
+// //Layout
+@import "sass/components/header";
+@import "sass/components/index";
+@import "sass/components/footer";
+@import "sass/components/product-pages";
+@import "sass/components/sign-pages";
+@import "sass/components/cart-pages";
+@import "sass/components/loading";
+@import "sass/components/profile";
+@import "sass/components/account";
+
