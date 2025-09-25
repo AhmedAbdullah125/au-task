@@ -711,6 +711,11 @@ html[dir=rtl] .add-to .dropdown-content {
   justify-content: space-between;
   padding: 12px 0;
 }
+.upper-header .img-logo img {
+  width: 91px;
+  max-height: 69px;
+  image-rendering: -webkit-optimize-contrast;
+}
 
 .header-welcome {
   font-weight: 300;
@@ -824,8 +829,10 @@ html[dir=rtl] .add-to .dropdown-content {
   .top-header .img-logo,
   .header-welcome,
   .upper-header .line,
-  .header-icons,
   .hide-sm {
+    display: none;
+  }
+  .header-icons .user-info {
     display: none;
   }
 }
@@ -932,6 +939,9 @@ html[dir=rtl] .add-to .dropdown-content {
 
 .main .pro-img img {
   width: 100%;
+  aspect-ratio: 2/1;
+  -o-object-fit: unset;
+     object-fit: unset;
 }
 
 .main-slider .swiper-btn {
@@ -1028,6 +1038,16 @@ html[dir=rtl] .add-to .dropdown-content {
   font-size: 20px;
   color: var(--main-hover);
   margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .section-title {
+    font-size: 14px;
+  }
 }
 
 .brands-figure {
@@ -1137,6 +1157,16 @@ html[dir=rtl] .add-to .dropdown-content {
 }
 .products-link:hover {
   color: var(--main-color);
+}
+@media screen and (max-width: 767px) {
+  .products-link {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .products-link {
+    font-size: 14px;
+  }
 }
 
 .grid-cont {
@@ -1421,7 +1451,8 @@ html[dir=rtl] .add-to .dropdown-content {
 }
 
 /*                                  category slider                        */
-.success-page, .fail-page {
+.success-page,
+.fail-page {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
@@ -1431,12 +1462,14 @@ html[dir=rtl] .add-to .dropdown-content {
   flex-direction: column;
   justify-content: center;
 }
-.success-page img, .fail-page img {
+.success-page img,
+.fail-page img {
   width: 145px;
   height: auto;
   margin: 0 auto 20px;
 }
-.success-page h3, .fail-page h3 {
+.success-page h3,
+.fail-page h3 {
   font-weight: 800;
   font-size: 20px;
   color: var(--main-color);

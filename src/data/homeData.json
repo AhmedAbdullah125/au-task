@@ -1,0 +1,197 @@
+{
+  "banners": [
+    {
+      "id": 7,
+      "name": "123",
+      "image": "https://img.freepik.com/free-photo/image-happy-man-receive-cashback-purchase-holding-smartphone-shopping-bags-smiling-excited-standing-yellow-background_1258-40975.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 8,
+      "name": "123",
+      "image": "https://img.freepik.com/free-photo/christmas-sales-concept-with-cart-bags_23-2147730834.jpg?semt=ais_incoming&w=740&q=80"
+    },
+    {
+      "id": 9,
+      "name": "123",
+      "image": "https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?semt=ais_hybrid&w=740"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "مختبرات فحص الدم",
+      "image": "https://b3app.co/storage/101/IMG_2457.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "عيادات دراسة النوم",
+      "image": "https://b3app.co/storage/100/IMG_2456.png"
+    },
+    {
+      "id": 5,
+      "name": "عيادات الأعشاب الطبية",
+      "image": "https://b3app.co/storage/99/IMG_2455.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "الأعشاب الطبية",
+      "image": "https://b3app.co/storage/104/IMG_2460.jpeg"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": 1,
+      "name": "ناتورال فاكتورز‏, WellBetX، البربارين",
+      "price_before_discount": "240.00",
+      "price": "130.00",
+      "image": "https://b3app.co/storage/64/90c4397b1599daf903c4890cd9ba690f.jpg",
+      "rate": "3.20",
+      "store": {
+        "id": 1,
+        "name": "صيدلية الدواء",
+        "image": "https://b3app.co/storage/70/590e3bd08e667a27ba0a881f664c6ed5.png"
+      }
+    },
+    {
+      "id": 2,
+      "name": "الأشواجندا العضوي",
+      "price_before_discount": null,
+      "price": "8.80",
+      "image": "https://b3app.co/storage/96/IMG_2396.png",
+      "rate": "3.50",
+      "store": {
+        "id": 1,
+        "name": "صيدلية الدواء",
+        "image": "https://b3app.co/storage/70/590e3bd08e667a27ba0a881f664c6ed5.png"
+      }
+    },
+    {
+      "id": 5,
+      "name": "ناو فودز‏, زيت سمك معزز بأوميجا 3، 90 كبسولة هلامية",
+      "price_before_discount": "150.00",
+      "price": "90.00",
+      "image": "https://b3app.co/storage/53/4f1a52fa291e31d456e8918bbfb097a3.jpg",
+      "rate": "3.67",
+      "store": {
+        "id": 4,
+        "name": "صيدلة الشفاء",
+        "image": "https://b3app.co/storage/56/10bb4adc54e5d97cd5d19c6be4b008d3.png"
+      }
+    },
+    {
+      "id": 8,
+      "name": "اليجون اكني كريم",
+      "price_before_discount": "250.00",
+      "price": "200.00",
+      "image": "https://b3app.co/storage/84/26CFBE15-F4A7-4DF1-A57F-88619CB75B52.jpeg",
+      "rate": "5.00",
+      "store": {
+        "id": 5,
+        "name": "صيدليه ادفيس",
+        "image": "https://b3app.co/storage/86/pngtree-pharmacy-snake-medical-bowl-png-image_6534987.png"
+      }
+    }
+  ],
+  "most_sell": [
+    {
+      "id": 5,
+      "name": "ناو فودز‏, زيت سمك معزز بأوميجا 3، 90 كبسولة هلامية",
+      "price_before_discount": "150.00",
+      "price": "90.00",
+      "image": "https://b3app.co/storage/53/4f1a52fa291e31d456e8918bbfb097a3.jpg",
+      "rate": "3.67",
+      "store": {
+        "id": 4,
+        "name": "صيدلة الشفاء",
+        "image": "https://b3app.co/storage/56/10bb4adc54e5d97cd5d19c6be4b008d3.png"
+      }
+    },
+    {
+      "id": 1,
+      "name": "ناتورال فاكتورز‏, WellBetX، البربارين",
+      "price_before_discount": "240.00",
+      "price": "130.00",
+      "image": "https://b3app.co/storage/64/90c4397b1599daf903c4890cd9ba690f.jpg",
+      "rate": "3.20",
+      "store": {
+        "id": 1,
+        "name": "صيدلية الدواء",
+        "image": "https://b3app.co/storage/70/590e3bd08e667a27ba0a881f664c6ed5.png"
+      }
+    },
+    {
+      "id": 2,
+      "name": "الأشواجندا العضوي",
+      "price_before_discount": null,
+      "price": "8.80",
+      "image": "https://b3app.co/storage/96/IMG_2396.png",
+      "rate": "3.50",
+      "store": {
+        "id": 1,
+        "name": "صيدلية الدواء",
+        "image": "https://b3app.co/storage/70/590e3bd08e667a27ba0a881f664c6ed5.png"
+      }
+    },
+    {
+      "id": 8,
+      "name": "اليجون اكني كريم",
+      "price_before_discount": "250.00",
+      "price": "200.00",
+      "image": "https://b3app.co/storage/84/26CFBE15-F4A7-4DF1-A57F-88619CB75B52.jpeg",
+      "rate": "5.00",
+      "store": {
+        "id": 5,
+        "name": "صيدليه ادفيس",
+        "image": "https://b3app.co/storage/86/pngtree-pharmacy-snake-medical-bowl-png-image_6534987.png"
+      }
+    },
+    {
+      "id": 9,
+      "name": "اليجون اكني كريم",
+      "price_before_discount": "250.00",
+      "price": "200.00",
+      "image": "https://img.freepik.com/free-photo/image-happy-man-receive-cashback-purchase-holding-smartphone-shopping-bags-smiling-excited-standing-yellow-background_1258-40975.jpg?semt=ais_hybrid&w=740&q=80",
+      "rate": "5.00",
+      "store": {
+        "id": 5,
+        "name": "صيدليه ادفيس",
+        "image": "https://b3app.co/storage/86/pngtree-pharmacy-snake-medical-bowl-png-image_6534987.png"
+      }
+    },
+    {
+      "id": 10,
+      "name": "اليجون اكني كريم",
+      "price_before_discount": "250.00",
+      "price": "200.00",
+      "image":  "https://img.freepik.com/free-photo/christmas-sales-concept-with-cart-bags_23-2147730834.jpg?semt=ais_incoming&w=740&q=80",
+      "rate": "5.00",
+      "store": {
+        "id": 5,
+        "name": "صيدليه ادفيس",
+        "image": "https://b3app.co/storage/86/pngtree-pharmacy-snake-medical-bowl-png-image_6534987.png"
+      }
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Nature’s Answer",
+      "image": "https://b3app.co/storage/95/IMG_2391.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "هيمالايا",
+      "image": "https://b3app.co/storage/94/IMG_2389.png"
+    },
+    {
+      "id": 4,
+      "name": "اوم ماشروم",
+      "image": "https://b3app.co/storage/93/IMG_2388.png"
+    },
+    {
+      "id": 5,
+      "name": "غايا هيرب",
+      "image": "https://b3app.co/storage/92/IMG_2387.webp"
+    }
+  ]
+}

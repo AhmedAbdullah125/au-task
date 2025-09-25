@@ -443,6 +443,13 @@ html[dir="rtl"] .add-to .dropdown-content {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
+  .img-logo{
+    img{
+      width: 91px;
+      max-height: 69px;
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
 }
 
 .header-welcome {
@@ -565,9 +572,13 @@ html[dir="rtl"] .add-to .dropdown-content {
   .top-header .img-logo,
   .header-welcome,
   .upper-header .line,
-  .header-icons,
   .hide-sm {
     display: none;
+  }
+  .header-icons{
+    .user-info{
+      display: none;
+    }
   }
 }
 

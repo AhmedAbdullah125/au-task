@@ -1,7 +1,7 @@
 {
   "ar": {
-    "welcome": "مرحباً بك في موقع بي ثري",
-    "b3": "بي ثري",
+    "welcome": "مرحباً بك في موقع تست",
+    "b3": "تست",
     "shipping_to": "شحن إلي",
     "language_ar": "عربي",
     "language_en": "English",
@@ -155,8 +155,8 @@
     "change":"تغيير"
   },
   "en": {
-    "welcome": "Welcome to B3 website",
-    "b3": "B3",
+    "welcome": "Test",
+    "b3": "test",
     "shipping_to": "Shipping to",
     "language_ar": "Arabic",
     "language_en": "English",

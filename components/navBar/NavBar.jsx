@@ -1,38 +1,22 @@
 'use client';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProfileDataContext } from '@/src/Context/ProfileContext';
 import axios from 'axios';
 import { API_BASE_URL } from '@/lib/apiConfig';
-import flag from '@/public/images/flag.svg';
-import smallLogo from '@/public/images/sm-logo.svg';
+import smallLogo from '@/public/images/sm-logo.png';
 import cartImage from '@/public/images/cart.svg';
-import logo from '@/public/images/logo.svg';
+import logo from '@/public/images/sm-logo.png';
 import { t } from '@/lib/i18n';
-import { usePathname, useRouter } from 'next/navigation';
-import { logOut } from '../profile/logout';
+import {  useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import Loading from '@/src/app/loading';
 import { CounterContext } from '@/src/Context/CounterContext';
 
 export default function NavBar() {
-    const { data } = useContext(ProfileDataContext);
     const {cartTotalPrice ,cartCont} = useContext(CounterContext);
-    const token = localStorage.getItem('token');
-    const [countryData, setCountryData] = useState([]);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-    const [selectedCountry, setSelectedCountry] = useState(() => {
-        if (typeof window !== 'undefined') {
-            const stored = localStorage.getItem('country');
-            return stored ? JSON.parse(stored) : null;
-        }
-        return null;
-    });
-    const handleLogout = () => {
-        logOut(API_BASE_URL, setLoading, router, toast);
-    };
 
     const [lang, setLang] = useState(() => {
         if (typeof window !== 'undefined') {
@@ -43,41 +27,6 @@ export default function NavBar() {
         }
         return 'ar';
     });
-    const pathname = usePathname();
-
-    useEffect(() => {
-        const getCountries = async () => {
-            try {
-                const response = await axios.get(`${API_BASE_URL}/general/countries`, { headers: { 'x-localization': lang, }, });
-                const countries = response.data.data;
-                setCountryData(countries);
-                if (!localStorage.getItem('country')) {
-                    const defaultCountry = countries[0];
-                    setSelectedCountry(defaultCountry);
-                    localStorage.setItem('country', JSON.stringify(defaultCountry));
-                }
-            } catch (error) {
-                console.error('Error retrieving countries:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        getCountries();
-    }, [lang]);
-    //get categories 
-    const [categories, setCategories] = useState([]);
-    useEffect(() => {
-        const getCategories = async () => {
-            try {
-                const response = await axios.get(`${API_BASE_URL}/general/categories`, { headers: { 'x-localization': lang, }, });
-                const categories = response.data.data;
-                setCategories(categories);
-            } catch (error) {
-                console.error('Error retrieving categories:', error);
-            }
-        };
-        getCategories();
-    }, [lang]);
     const [searchData, setSearchData] = useState([]);
     const sendSearchRequest = async () => {
         setLoading(true);
@@ -107,40 +56,13 @@ export default function NavBar() {
     };
 
     return (
-        <>
             <header style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
                 <div className="header-cont">
                     <div className="container">
                         <div className="upper-header">
                             <span className="header-welcome">{t(lang, 'welcome')}</span>
                             <div className="lang-section">
-                                <div className="dropdown cat-anchor">
-
-                                    {countryData.length > 0 && (
-                                        <>
-                                            <div className="upper-drop">
-                                                <Image alt="flag" src={selectedCountry?.image || flag} width={10} height={5} />
-                                                {`${t(lang, 'shipping_to')} ${countryData.find((country) => country.id === selectedCountry?.id)?.name || ''}`}
-                                                <i className="fa-solid fa-chevron-down"></i>
-                                            </div>
-                                            <div className="dropdown-content">
-                                                {countryData.map((country) => (
-                                                    <button
-                                                        className="cat-drop"
-                                                        key={country.id} onClick={() => {
-                                                            setSelectedCountry(country);
-                                                            localStorage.setItem('country', JSON.stringify(country));
-                                                            window.location.reload();
-                                                        }}
-                                                    >
-                                                        {country.name}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        </>
-                                    )}
-                                </div>
-                                <span className="line">|</span>
+                                
                                 <div className="dropdown cat-anchor">
                                     <div className="upper-drop">
                                         <i className="fa-solid fa-globe"></i>
@@ -243,50 +165,7 @@ export default function NavBar() {
                                     }
                                 </div>
                                 <div className="header-icons">
-                                    <div className="dropdown cat-anchor">
-                                        <div className="add-to">
-                                            <div className="user-cont">
-                                                <Link href="/profile">
-                                                    {
-                                                        data?.image ? <Image alt="user" src={data.image} width={30} height={30} /> : <i className="fa-solid fa-user"></i>
-                                                    }
-                                                </Link>
-                                                {
-                                                    token ?
-                                                        <div className="user-info">
-                                                            {data ? <span>{t(lang, 'hello_user')} {data.name}</span> : null}
-                                                            <span className="user-anc">
-                                                                {t(lang, 'account')}
-                                                                <i className="fa-solid fa-chevron-down"></i>
-                                                            </span>
-                                                        </div>
-                                                        : null
-                                                }
-                                            </div>
-                                            {
-                                                token ?
-                                                    <div className="dropdown-content">
-                                                        <Link className="cat-drop" href="/profile/account">
-                                                            {t(lang, 'my_account')}
-                                                        </Link>
-                                                        <Link className="cat-drop" href="/profile/orders">
-                                                            {t(lang, 'my_orders')}
-                                                        </Link>
-                                                        <Link className="cat-drop" href="/profile/favourites">
-                                                            {t(lang, 'my_wishlist')}
-                                                        </Link>
-                                                        <Link className="cat-drop" href="/profile/addresses">
-                                                            {t(lang, 'saved_addresses')}
-                                                        </Link>
-
-                                                        <button className="cat-drop" onClick={handleLogout} >
-                                                            {t(lang, 'logout')}
-                                                        </button>
-                                                    </div>
-                                                    : null
-                                            }
-                                        </div>
-                                    </div>
+                                   
                                     <Link href="/cart" className="add-to">
                                         <Image alt="cart" src={cartImage} />
                                         <div className="user-info">
@@ -295,71 +174,12 @@ export default function NavBar() {
                                         </div>
                                         <span className="counter">{cartCont?.length || 0}</span>
                                     </Link>
-                                    <div className="show-icons">
-                                        <Link className="menu-bars fixall" id="menu-id" href="#!">
-                                            <span className="bars open-bars"></span>
-                                        </Link>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    {
-                        categories?.length > 0 && pathname !== '/category' &&
-                        <nav>
-                            <div className="container">
-                                <div className="navgition">
-                                    <div className={lang === 'ar' ? `blur-start` : `blur-end`}></div>
-                                    <ul className="big-menu list-unstyled">
-                                        {
-                                            categories.map((category) => (
-                                                <li className="cat-li" key={category.id}>
-                                                    <a href={`/category?id=${category.id}&name=${category.name}`} className="cat-anchor">
-                                                        {category.name}
-                                                    </a>
-                                                </li>
-                                            ))
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    }
                 </div>
             </header>
-
-            <div className="menu-bar">
-                <div>
-                    <Link href="/" className="active">
-                        <i className="fa-solid fa-house"></i>
-                        <span>الرئيسية</span>
-                    </Link>
-                </div>
-                {/* <div>
-                    <Link href="#">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                        <span>استكشف</span>
-                    </Link>
-                </div> */}
-                <div>
-                    <Link href="/cart" className="cart-icon">
-                        <Image src={cartImage} alt="icon" />
-                    </Link>
-                </div>
-                {/* <div>
-                    <Link href="#">
-                        <i className="fa-solid fa-award"></i>
-                        <span>الماركات</span>
-                    </Link>
-                </div> */}
-                <div>
-                    <Link href="/profile">
-                        <i className="fa-solid fa-user"></i>
-                        <span>الحساب</span>
-                    </Link>
-                </div>
-            </div>
-        </>
     );
 }

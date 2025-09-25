@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { t } from '@/lib/i18n';
 import ProductCard from '../General/ProductCard';
 
-export default function HomeProDuctsGrid({ data ,title ,path,lang}) {
+export default function HomeProDuctsGrid({ data ,title ,path,lang}) {    
     return (
         <section className="product-section" style={{ direction: lang === 'en' ? 'ltr' : 'rtl' }}>
             <div className="container">
@@ -45,7 +45,6 @@ export default function HomeProDuctsGrid({ data ,title ,path,lang}) {
                 >
                     {
                         data.map((item) =>
-
                             <SwiperSlide key={item.id}>
                                 <ProductCard product={item} lang={lang} />
                             </SwiperSlide>
