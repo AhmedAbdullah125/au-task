@@ -15,21 +15,21 @@ import logo from '@/public/images/sm-logo.png';
 export async function generateMetadata() {
   // const seoData = await getSeoData(); // Fetch data on the server
   return {
-    title: 'B3',
-    description: 'B3',
-    keywords: "B3",
+    title: 'test',
+    description: 'test',
+    keywords: "test",
     openGraph: {
-      title: 'B3',
-      description: 'B3', 
-      url: 'B3-rose.vercel.com',
-      siteName: "B3",
+      title: 'test',
+      description: 'test', 
+      url: 'test-rose.vercel.com',
+      siteName: "test",
       images: [
         {
           // url: seoData?.seo_image || logo.src ,
           url: 'https://b3-rose.vercel.app/_next/static/media/blue-logo.62b83cbf.svg',
           width: 1200,
           height: 630,
-          alt: 'B3',
+          alt: 'test',
         },
       ],
       type: 'website',

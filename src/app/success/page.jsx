@@ -17,7 +17,7 @@ export default function Page() {
 
   return (
     <div className="success-page">
-      <Image src={logo} alt="B3" className="logo-blue" />
+      <Image src={logo} alt="test" className="logo-blue" />
       <h3>شكراً لاستثمارك بصحتك معنا</h3>
     </div>
   );

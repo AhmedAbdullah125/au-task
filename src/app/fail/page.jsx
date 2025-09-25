@@ -17,7 +17,7 @@ export default function Page() {
 
   return (
     <div className="fail-page">
-      <Image src={logo} alt="B3" className="logo-blue" />
+      <Image src={logo} alt="test" className="logo-blue" />
       <h3>نعتذر، حدث خطأ</h3>
     </div>
   );

@@ -15,7 +15,7 @@ export default function Profile() {
     return (
 
         <div className="img-empty">
-            <Image src={logo} alt='B3' className='logo-in-footer'></Image>
+            <Image src={logo} alt="test" className='logo-in-footer'></Image>
         </div>
     )
 }

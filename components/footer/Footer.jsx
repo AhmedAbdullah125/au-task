@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="footer-content">
             <div className="">
               <figure className="footer-logo">
-                <Link href="#"><Image src={logo} className="img-fluid" alt='B3' /></Link>
+                <Link href="#"><Image src={logo} className="img-fluid" alt="test" /></Link>
               </figure>
 
               <div className="social">

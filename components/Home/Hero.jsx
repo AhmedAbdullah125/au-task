@@ -35,7 +35,7 @@ export default function Hero({ data }) {
                                     <SwiperSlide key={img.id}>
                                         <div className="main">
                                             <Link href="#!" className="pro-img">
-                                                <Image src={img.image} className="img-fluid" width={1000} height={500} alt='B3' />
+                                                <Image src={img.image} className="img-fluid" width={1000} height={500} alt="test" />
                                             </Link>
                                         </div>
                                     </SwiperSlide>
