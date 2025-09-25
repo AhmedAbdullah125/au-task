@@ -18,9 +18,7 @@ export default function HomeWrapper() {
         <>
             <Hero data={data} />
             <HomeProDuctsGrid data={data.suggestions} title={t(lang, 'suggestions')} path="/suggestions" lang={lang} />
-            <HomeCategories data={data.categories} title={t(lang, 'categories')} path="/category" lang={lang} />
             <HomeProDuctsGrid data={data.most_sell} title={t(lang, 'most_sell')} path="/most_sell" lang={lang} />
-            <HomeBrands data={data.brands} title={t(lang, 'brands')} path="/brand" lang={lang} />
         </>
     );
 }
