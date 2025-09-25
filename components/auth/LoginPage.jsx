@@ -2,7 +2,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import bluelogo from '@/public/images/blue-logo.svg';
+import bluelogo from '@/public/images/sm-logo.png';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { sendPostRequest } from './loginRequest';

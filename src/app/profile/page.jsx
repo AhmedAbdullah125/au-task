@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 // import { CounterContext } from '@/app/Context/CounterContext';
 import Image from 'next/image'
-import logo from '@/public/images/blue-logo.svg'
+import logo from '@/public/images/sm-logo.png'
 import { useRouter } from 'next/navigation';
 export default function Profile() {
     const router = useRouter();

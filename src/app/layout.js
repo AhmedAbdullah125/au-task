@@ -9,7 +9,7 @@ import Footer from '@/components/footer/Footer';
 import { CounterProvider } from '@/src/Context/CounterContext';
 import { Toaster } from 'sonner';
 import { ProfileDataProvider } from '@/src/Context/ProfileContext';
-import logo from '@/public/images/blue-logo.svg';
+import logo from '@/public/images/sm-logo.png';
 
 
 export async function generateMetadata() {

@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import logo from '@/public/images/blue-logo.svg';
+import logo from '@/public/images/sm-logo.png';
 import Image from 'next/image';
 
 export default function Page() {

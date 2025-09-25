@@ -1486,6 +1486,12 @@ footer {
   position: relative;
   background-color: #f2f4ff;
 }
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
 .footer-logo {
   max-width: 126px;

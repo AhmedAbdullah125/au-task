@@ -86,7 +86,7 @@ export default function Register({  setStep, setPhone, setCountryIso }) {
                 <div className="upper-head">
                     <a href="index.html" className="logo-ancor">
                         <figure className="logo-img">
-                            <img src="images/blue-logo.svg" alt="logo" className="img-fluid" />
+                            <img src="images/sm-logo.png" alt="logo" className="img-fluid" />
                         </figure>
                     </a>
                 </div>

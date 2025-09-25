@@ -3,6 +3,12 @@ footer {
   padding: 24px 0 0;
   position: relative;
   background-color: #f2f4ff;
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .footer-logo {
   max-width: 126px;
